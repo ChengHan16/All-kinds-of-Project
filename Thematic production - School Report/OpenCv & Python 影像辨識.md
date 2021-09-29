@@ -196,7 +196,13 @@ if __name__ == "__main__":
 ```
 ![6-1](https://github.com/ChengHan16/All-kinds-of-Project/blob/main/Thematic%20production%20-%20School%20Report/Img%20Placement%20area/OpenCv%20%26%20Python%20%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98/6-1%20%E6%89%BE%E5%87%BA%E8%BC%AA%E5%BB%93.JPG)
 ### ●【檢查 OpenCV 版本】15:55
-
+```py
+if "3.0" < cv2.__version__ < "3.5":
+        _, cnts, hierarchy = cv2.findContours(process, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    else:
+        cnts, hierarchy = cv2.findContours(process, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+''' 假如版本在 3.0 到 3.5的時候會有3個回傳，那其他版本都是兩個就是 harery & counter '''
+```
 ### ●【畫圖片將輪廓範圍顯示】(使用 drawcontours) ~17:30
 ```py
 import cv2
