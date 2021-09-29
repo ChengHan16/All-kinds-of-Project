@@ -40,6 +40,159 @@ if __name__ == "__main__":
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ```
+> #### 設檢查器 typing：給他檢查今天未來輸入的型態都是對的
+
+> #### 透過 Opcv 的 threshold 功能將原始照片輸入進去 <br> cv2.threshold(img(輸入), dst=img, *(89, 255, 0)(輸出) <br> * (米字號) 是用來將所有東西拆開，把3個物件原本的一個 tuple 物件拆成 3 個物件變 89, 255, 0
+
+## tuple！？
+> ### 元組（tuple） 是 Python 的資料儲存容器之一，最大的特點就是，它是「不可變」（Immutable）的資料型態。 <br> Tuple 說明：https://selflearningsuccess.com/python-tuple/
+ 
+### ●【變成灰階原況照片】 <br> 由於照片是彩色的，閥值設定會使顏色變得奇怪，所以此打算將照片變原況灰階狀態 <br> 透過 Convert(轉換) 的方式把照片變灰階 img gray
+```py
+import cv2
+import numpy as np
+
+def findcontour(img: np.ndarray):
+    cv2.threshold(img, dst=img, *(89, 255, 0))
+    return img
+
+if __name__ == "__main__":
+
+    img = cv2.imread("image1.jpg")
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) //透過 Convert(轉換) 的方式把照片變灰階
+    img = findcontour(img_gray) //輸出記得換成 Convert 過的 img_gray
+
+    cv2.namedWindow("image1", cv2.WINDOW_NORMAL)
+    cv2.imshow("image1", img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+```
+### ●【使用 morphology去除空洞】 <br> 若照片上有黑點點 & 圈圈的部分可以使用膨脹或侵蝕方式來去除
+```py
+import cv2
+import numpy as np
+from numpy import array, uint8
+
+def findcontour(img: np.ndarray):
+    cv2.threshold(img, dst=img, *(89, 255, 0))
+    cv2.morphologyEx(img, dst=img,  *(2, array([[0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [1, 1, 1, 1, 1, 1, 1],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0]], dtype=uint8)), iterations=6) //可自定義想要的遮罩形狀, 需要加上 from numpy import array, uint8
+    return img
+
+if __name__ == "__main__":
+
+    img = cv2.imread("image1.jpg")
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img = findcontour(img_gray)
+
+    cv2.namedWindow("image1", cv2.WINDOW_NORMAL)
+    cv2.imshow("image1", img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+```
+### ●【使用侵蝕將黑點拿掉】
+```py
+import cv2
+import numpy as np
+from numpy import array, uint8
+
+def findcontour(img: np.ndarray):
+    cv2.threshold(img, dst=img, *(89, 255, 0))
+    cv2.morphologyEx(img, dst=img,  *(2, array([[0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [1, 1, 1, 1, 1, 1, 1],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0]], dtype=uint8)), iterations=6)
+    cv2.erode(img, dst=img, *(array([[0, 0, 1, 0, 0],
+                                     [0, 0, 1, 0, 0],
+                                     [1, 1, 1, 1, 1],
+                                     [0, 0, 1, 0, 0],
+                                     [0, 0, 1, 0, 0]], dtype=uint8),), iterations=1) //使用erode(侵蝕)，並用類似遮罩做辨識
+    cv2.dilate(img, dst=img, *(array([[0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [1, 1, 1, 1, 1, 1, 1],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0]], dtype=uint8),), **{'iterations': 8}) //使用dilate(膨脹)將黑點去掉
+    return img
+
+if __name__ == "__main__":
+
+    img = cv2.imread("image1.jpg")
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img_copy = img_gray.copy()
+    img = findcontour(img_gray)
+
+    cv2.namedWindow("image1", cv2.WINDOW_NORMAL)
+    cv2.namedWindow("compare", cv2.WINDOW_NORMAL)
+    cv2.imshow("image1", img_gray)
+    cv2.imshow("compare", img_copy)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+```
+### ●【尋找輪廓】13:30 ~ 15:30
+```py
+import cv2
+import numpy as np
+from numpy import array, uint8
+
+def findcontour(img: np.ndarray):
+    cv2.threshold(img, dst=img, *(89, 255, 0))
+    cv2.morphologyEx(img, dst=img,  *(2, array([[0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [1, 1, 1, 1, 1, 1, 1],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0]], dtype=uint8)), iterations=6)
+    cv2.erode(img, dst=img, *(array([[0, 0, 1, 0, 0],
+                                     [0, 0, 1, 0, 0],
+                                     [1, 1, 1, 1, 1],
+                                     [0, 0, 1, 0, 0],
+                                     [0, 0, 1, 0, 0]], dtype=uint8),), iterations=1)
+    cv2.dilate(img, dst=img, *(array([[0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [1, 1, 1, 1, 1, 1, 1],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0]], dtype=uint8),), **{'iterations': 8})
+    return img
+
+if __name__ == "__main__":
+
+    img = cv2.imread("image1.jpg")
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img_copy = img_gray.copy()
+    process = findcontour(img_gray) //此為處理中的圖所以更改名稱為 process
+    process = cv2.Canny(process, 200, 255, apertureSize=5) //使用 Canny 的方式把邊找出來
+    cnts, _ =  cv2.findContours(process, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE) //照片存進來後會有一個輪廓，cnts
+    print(len(cnts)) //列印出看有無找到輪廓
+    exit()
+
+    cv2.namedWindow("image1", cv2.WINDOW_NORMAL)
+    cv2.namedWindow("compare", cv2.WINDOW_NORMAL)
+    cv2.imshow("image1", img_gray)
+    cv2.imshow("compare", img_copy)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+```
+
+
+
+
+
+
+
+
 
 
 
