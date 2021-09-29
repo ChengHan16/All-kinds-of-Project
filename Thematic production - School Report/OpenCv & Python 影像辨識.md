@@ -300,7 +300,6 @@ if __name__ == "__main__":
 ```
 ### 執行結果：
 ![7](https://github.com/ChengHan16/All-kinds-of-Project/blob/main/Thematic%20production%20-%20School%20Report/Img%20Placement%20area/OpenCv%20%26%20Python%20%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98/7%20%E6%89%BE%E5%87%BA%E4%B8%AD%E5%BF%83%E9%BB%9E.JPG)
-```
 ### ● 【完成程式碼】
 ```py
 import cv2
