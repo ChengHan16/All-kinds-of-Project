@@ -70,6 +70,8 @@ if __name__ == "__main__":
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ```
+### 執行結果：
+![3](https://github.com/ChengHan16/All-kinds-of-Project/blob/main/Thematic%20production%20-%20School%20Report/Img%20Placement%20area/OpenCv%20%26%20Python%20%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98/3%20%E7%81%B0%E9%9A%8E%E5%8E%9F%E5%A7%8B%E5%9C%96%E7%89%87.JPG)
 ### ●【使用 morphology去除空洞】 <br> 若照片上有黑點點 & 圈圈的部分可以使用膨脹或侵蝕方式來去除
 ```py
 import cv2
@@ -98,6 +100,8 @@ if __name__ == "__main__":
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ```
+### 執行結果：
+![4](https://github.com/ChengHan16/All-kinds-of-Project/blob/main/Thematic%20production%20-%20School%20Report/Img%20Placement%20area/OpenCv%20%26%20Python%20%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98/4%20%E5%B0%87%E9%BB%91%E9%BB%9E%E7%A9%BA%E6%B4%9E%E5%8E%BB%E6%8E%89.JPG)
 ### ●【使用侵蝕將黑點拿掉】
 ```py
 import cv2
@@ -141,6 +145,8 @@ if __name__ == "__main__":
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ```
+### 執行結果：
+![5](https://github.com/ChengHan16/All-kinds-of-Project/blob/main/Thematic%20production%20-%20School%20Report/Img%20Placement%20area/OpenCv%20%26%20Python%20%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98/5%20%E8%86%A8%E8%84%B9%E5%8F%8A%E4%BE%B5%E8%9D%95%E5%B0%87%E9%BB%91%E9%BB%9E%E5%8E%BB%E9%99%A4.JPG)
 ### ●【尋找輪廓】13:30 ~ 15:30
 ```py
 import cv2
@@ -188,6 +194,7 @@ if __name__ == "__main__":
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ```
+
 ### ●【檢查 OpenCV 版本】15:55
 
 ### ●【畫圖片將輪廓範圍顯示】(使用 drawcontours) ~17:30
@@ -236,6 +243,7 @@ if __name__ == "__main__":
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ```
+![6](https://github.com/ChengHan16/All-kinds-of-Project/blob/main/Thematic%20production%20-%20School%20Report/Img%20Placement%20area/OpenCv%20%26%20Python%20%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98/6%20%E6%8A%93%E5%8F%96%E5%9C%96%E7%89%87%E7%95%AB%E5%87%BA%E8%BC%AA%E5%BB%93.JPG)
 ### ●【畫中心點】(透過 for 對物體 Cotainer 做跌代，可以在這判斷結果)
 ```py
 import cv2
@@ -289,6 +297,9 @@ if __name__ == "__main__":
     cv2.imshow("compare", img_copy)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+```
+### 執行結果：
+![7](https://github.com/ChengHan16/All-kinds-of-Project/blob/main/Thematic%20production%20-%20School%20Report/Img%20Placement%20area/OpenCv%20%26%20Python%20%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98/7%20%E6%89%BE%E5%87%BA%E4%B8%AD%E5%BF%83%E9%BB%9E.JPG)
 ```
 ### ● 【完成程式碼】
 ```py
