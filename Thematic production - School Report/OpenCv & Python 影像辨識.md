@@ -20,7 +20,8 @@ if __name__ == "__main__":
     cv2.destroyALLWindows() //有成功啟動後將視窗關掉
 ```
 > #### 說明：正規寫法使用 main 來執行
-
+### 執行結果：
+![1](https://github.com/ChengHan16/All-kinds-of-Project/blob/main/Thematic%20production%20-%20School%20Report/Img%20Placement%20area/OpenCv%20%26%20Python%20%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98/1%20%E5%9C%96%E7%89%87%E9%A1%AF%E7%A4%BA%E6%B8%AC%E8%A9%A6.JPG)
 ### ●【開始尋找輪廓】(使用閥值方法) 單獨做函式專門做處理
 ```py
 import cv2
@@ -41,6 +42,8 @@ if __name__ == "__main__":
     cv2.destroyAllWindows()
 ```
 > #### 設檢查器 typing：給他檢查今天未來輸入的型態都是對的
+### 執行結果：
+![2](https://github.com/ChengHan16/All-kinds-of-Project/blob/main/Thematic%20production%20-%20School%20Report/Img%20Placement%20area/OpenCv%20%26%20Python%20%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98/2%20%E6%89%BE%E5%87%BA%E8%BC%AA%E5%BB%93.JPG)
 
 > #### 透過 Opcv 的 threshold 功能將原始照片輸入進去 <br> cv2.threshold(img(輸入), dst=img, *(89, 255, 0)(輸出) <br> * (米字號) 是用來將所有東西拆開，把3個物件原本的一個 tuple 物件拆成 3 個物件變 89, 255, 0
 
