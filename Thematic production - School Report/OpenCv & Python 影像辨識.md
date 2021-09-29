@@ -194,7 +194,7 @@ if __name__ == "__main__":
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ```
-
+![6-1](https://github.com/ChengHan16/All-kinds-of-Project/blob/main/Thematic%20production%20-%20School%20Report/Img%20Placement%20area/OpenCv%20%26%20Python%20%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98/6-1%20%E6%89%BE%E5%87%BA%E8%BC%AA%E5%BB%93.JPG)
 ### ●【檢查 OpenCV 版本】15:55
 
 ### ●【畫圖片將輪廓範圍顯示】(使用 drawcontours) ~17:30
