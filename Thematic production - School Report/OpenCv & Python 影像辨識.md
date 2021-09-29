@@ -185,18 +185,109 @@ if __name__ == "__main__":
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ```
+### ●【檢查 OpenCV 版本】15:55
 
+### ●【畫圖片將輪廓範圍顯示】(使用 drawcontours) ~17:30
+```py
+import cv2
+import numpy as np
+from numpy import array, uint8
 
+def findcontour(img: np.ndarray):
+    cv2.threshold(img, dst=img, *(89, 255, 0))
+    cv2.morphologyEx(img, dst=img,  *(2, array([[0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [1, 1, 1, 1, 1, 1, 1],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0]], dtype=uint8)), iterations=6)
+    cv2.erode(img, dst=img, *(array([[0, 0, 1, 0, 0],
+                                     [0, 0, 1, 0, 0],
+                                     [1, 1, 1, 1, 1],
+                                     [0, 0, 1, 0, 0],
+                                     [0, 0, 1, 0, 0]], dtype=uint8),), iterations=1)
+    cv2.dilate(img, dst=img, *(array([[0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [1, 1, 1, 1, 1, 1, 1],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0]], dtype=uint8),), **{'iterations': 8})
+    return img
 
+if __name__ == "__main__":
 
+    img = cv2.imread("image1.jpg")
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img_copy = img_gray.copy()
+    process = findcontour(img_gray)
+    process = cv2.Canny(process, 200, 255, apertureSize=5)
+    cnts, _ =  cv2.findContours(process, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    cv2.drawContours(img, cnts, -1, (0, 255, 0), 3) //取原始照片(彩色)後而cnts輪廓放進來，(0, 255, 0),為BGR 顏色綠，3為輪廓粗細
 
+    cv2.namedWindow("image1", cv2.WINDOW_NORMAL)
+    cv2.namedWindow("compare", cv2.WINDOW_NORMAL)
+    cv2.imshow("image1", img)
+    cv2.imshow("compare", img_copy)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+```
+### ●【畫中心點】(透過 for 對物體 Cotainer 做跌代，可以在這判斷結果)
+```py
+import cv2
+import numpy as np
+from numpy import array, uint8
 
+def findcontour(img: np.ndarray):
+    cv2.threshold(img, dst=img, *(89, 255, 0))
+    cv2.morphologyEx(img, dst=img,  *(2, array([[0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [1, 1, 1, 1, 1, 1, 1],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0],
+                                               [0, 0, 0, 1, 0, 0, 0]], dtype=uint8)), iterations=6)
+    cv2.erode(img, dst=img, *(array([[0, 0, 1, 0, 0],
+                                     [0, 0, 1, 0, 0],
+                                     [1, 1, 1, 1, 1],
+                                     [0, 0, 1, 0, 0],
+                                     [0, 0, 1, 0, 0]], dtype=uint8),), iterations=1)
+    cv2.dilate(img, dst=img, *(array([[0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [1, 1, 1, 1, 1, 1, 1],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0],
+                                      [0, 0, 0, 1, 0, 0, 0]], dtype=uint8),), **{'iterations': 8})
+    return img
 
+if __name__ == "__main__":
 
+    img = cv2.imread("image1.jpg")
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img_copy = img_gray.copy()
+    process = findcontour(img_gray)
+    process = cv2.Canny(process, 200, 255, apertureSize=5)
+    cnts, _ =  cv2.findContours(process, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    cv2.drawContours(img, cnts, -1, (0, 255, 0), 3)
 
+    for c in cnts:
+        if cv2.contourArea(c) < 300: //如果面積小於300就不執行任何動作，若沒有的話就對這輪廓做計算
+            continue
+        M = cv2.moments(c)
+        Cx = int(M["m10"] / M["m00"])
+        Cy = int(M["m01"] / M["m00"])
+        cv2.circle(img, (Cx, Cy), 10, (1, 227, 254), -1)
 
-
-
+    cv2.namedWindow("image1", cv2.WINDOW_NORMAL)
+    cv2.namedWindow("compare", cv2.WINDOW_NORMAL)
+    cv2.imshow("image1", img)
+    cv2.imshow("compare", img_copy)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+```
+### ● 【完成程式碼】
 ```py
 import cv2
 import numpy as np
