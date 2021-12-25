@@ -1,4 +1,4 @@
-### download_highvideo.py
+### download_highvideo.py <br> 最高 720p
 ```py
 from pytube import Playlist
 playlist = Playlist('https://www.youtube.com/watch?v=3hSKNGcjFaA&list=PL12UaAf_xzfrBnvNaqS8tOniZddE4o9Q-')
