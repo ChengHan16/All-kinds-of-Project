@@ -1,3 +1,16 @@
+### download_highvideo.py
+```py
+from pytube import Playlist
+playlist = Playlist('https://www.youtube.com/watch?v=3hSKNGcjFaA&list=PL12UaAf_xzfrBnvNaqS8tOniZddE4o9Q-')
+print('Number of videos in playlist: %s' % len(playlist.video_urls))
+
+for video in playlist.videos:
+    video.streams.get_highest_resolution().download()
+
+print("全部下載成功！！！")
+```
+
+
 ### download_mp4_and_mp3.py
 ```py
 from moviepy.editor import *
