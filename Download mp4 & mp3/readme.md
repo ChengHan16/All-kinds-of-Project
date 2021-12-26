@@ -6,6 +6,9 @@
 ### Pytube 用法 (官方)
 > https://pytube.io/en/latest/user/streams.html#filtering-streams
 
+### pytube模塊，下載YouTube視頻
+> https://www.twblogs.net/a/5db31e1abd9eee310ee66ae4
+
 ### module contains a lookup table of YouTube's itag values
 > https://github.com/pytube/pytube/blob/master/pytube/itags.py
 
