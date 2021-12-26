@@ -203,7 +203,7 @@ yt = YouTube('http://youtube.com/watch?v=9bZkp7q19f0') # or any other YouTube-li
 yt.streams.order_by('resolution').desc().first().download()
 ```
 It will download you the highest resolution video by doing the following steps: <br> &emsp;  1. Retrieving a list of available resolutions and formats, but out of order:
-<br> 檢索可用分辨率和格式的列表，但無序：
+<br> &emsp; &emsp; 檢索可用分辨率和格式的列表，但無序：
 ```
 >>> yt.streams
 [<Stream: itag="18" mime_type="video/mp4" res="360p" fps="24fps" vcodec="avc1.42001E" acodec="mp4a.40.2" progressive="True" type="video">, 
@@ -230,7 +230,7 @@ It will download you the highest resolution video by doing the following steps: 
  <Stream: itag="251" mime_type="audio/webm" abr="160kbps" acodec="opus" progressive="False" type="audio">]
 ```
 &emsp; 2.Order the list by resolution with highest resolution first <br> 
-首先按分辨率排序列表，分辨率最高
+&emsp;&emsp;  首先按分辨率排序列表，分辨率最高
 ```
 >>> yt.streams.order_by('resolution').desc()
 [<Stream: itag="399" mime_type="video/mp4" res="1080p" fps="24fps" vcodec="av01.0.08M.08" progressive="False" type="video">, 
@@ -253,14 +253,23 @@ It will download you the highest resolution video by doing the following steps: 
  <Stream: itag="160" mime_type="video/mp4" res="144p" fps="24fps" vcodec="avc1.4d400c" progressive="False" type="video">]
 ```
 &emsp; 3.Select the first element from that list, in this case the highest resolution one. <br> 
-從該列表中選擇第一個元素，在本例中為最高分辨率的元素。
+&emsp;&emsp;  從該列表中選擇第一個元素，在本例中為最高分辨率的元素。
 ```
 >>> yt.streams.order_by('resolution').desc().first()
 <Stream: itag="399" mime_type="video/mp4" res="1080p" fps="24fps" vcodec="av01.0.08M.08" progressive="False" type="video">
 ```
-
-
-
+First can also be substituted with [0] like so:  <br> 
+&emsp;&emsp;  First 也可以替換為[0]：
+```
+>>> yt.streams.order_by('resolution').desc()[0]
+<Stream: itag="399" mime_type="video/mp4" res="1080p" fps="24fps" vcodec="av01.0.08M.08" progressive="False" type="video">
+```
+meaning that  <br> 
+&emsp;&emsp; 意思是
+```
+>>> yt.streams.first() == yt.streams[0]
+True
+```
 
 
 
