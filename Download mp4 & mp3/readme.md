@@ -2,7 +2,6 @@
 ### &emsp;&emsp; - Pytube <br> &emsp;&emsp; - you-get
 
 ## － 建置虛擬環境：
-###  ⚠
 > ###  PowerShell ISE
 >> 1. get-executionpolicy (會回傳 Restricted
 >> 2. set-executionpolicy remotesigned
