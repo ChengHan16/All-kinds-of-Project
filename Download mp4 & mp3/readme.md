@@ -18,7 +18,7 @@
 ---
 ## － Error：
 ### UTF-8 decode 0xa4
-解決辦法：將 UTF-8 編碼改為 ANSI 
+> 解決辦法：將 UTF-8 編碼改為 ANSI 
 
 ## － 參考資料：
 
