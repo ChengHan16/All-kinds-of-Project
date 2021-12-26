@@ -192,3 +192,7 @@ stream = yt.streams.order_by('resolution').desc().first()
 #stream = yt.streams.get_by_itag(400)
 stream.download()
 ```
+
+## 參考資料
+### 下載最高畫質解決辦法 Trouble understanding the pytube "first" method
+> https://stackoverflow.com/questions/67239781/trouble-understanding-the-pytube-first-method
