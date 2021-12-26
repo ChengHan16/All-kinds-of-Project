@@ -32,6 +32,9 @@
 ### ffmpeg 將音頻轉換為不同的格式/採樣率
 > https://gist.github.com/protrolium/e0dbd4bb0f1a396fcb55
 
+### 特定目錄中下載 How to download whole playlist videos from YouTube using Python 
+> https://freshlybuilt.com/how-to-download-whole-playlist-videos-from-youtube-using-python/
+
 ## Other：
 ### FFmpeg 批量 AV 轉換器
 > https://ffmpeg-batch.sourceforge.io/
