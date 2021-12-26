@@ -16,3 +16,9 @@
 
 ### tkinter 模組字體（font）的使用
 > https://www.pynote.net/archives/1220
+
+### [Python] 使用 tqdm 套件展示進度條
+> https://clay-atlas.com/blog/2019/11/11/python-chinese-tutorial-tqdm-progress-and-ourself/
+
+### 使用pytube下載Youtube list
+> https://liaozihzrong.github.io/2020/08/14/allinone19/
