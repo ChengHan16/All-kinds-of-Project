@@ -1,7 +1,7 @@
-## 使用套件：
+## － 使用套件：
 ### &emsp;&emsp; - Pytube <br> &emsp;&emsp; - you-get
 
-## 建置虛擬環境：
+## － 建置虛擬環境：
 ###  ⚠ 安裝 Python 3.9.6 (記得勾選安裝的首頁最下面的 Add Python 3.9 to PATH)
 > ###  PowerShell ISE
 >> 1. get-executionpolicy (會回傳 Restricted
@@ -17,11 +17,11 @@
 >> 4. 在虛擬環境下安裝專案所需套件 pip3 install "套件名稱"
 > ### pip install Complete
 ---
-## Error：
+## － Error：
 ### UTF-8 decode 0xa4
 解決辦法：將 UTF-8 編碼改為 ANSI 
 
-## 參考資料：
+## － 參考資料：
 
 ### Pytube 用法 (官方)
 > https://pytube.io/en/latest/user/streams.html#filtering-streams
