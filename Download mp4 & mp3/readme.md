@@ -25,6 +25,9 @@
 ### Pytube 用法 (官方)
 > https://pytube.io/en/latest/user/streams.html#filtering-streams
 
+### Pytube 3
+> https://pytube3.readthedocs.io/en/latest/api.html
+
 ### pytube模塊，下載YouTube視頻
 > https://www.twblogs.net/a/5db31e1abd9eee310ee66ae4
 
