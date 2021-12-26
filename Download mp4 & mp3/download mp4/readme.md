@@ -258,13 +258,13 @@ It will download you the highest resolution video by doing the following steps: 
 >>> yt.streams.order_by('resolution').desc().first()
 <Stream: itag="399" mime_type="video/mp4" res="1080p" fps="24fps" vcodec="av01.0.08M.08" progressive="False" type="video">
 ```
-First can also be substituted with [0] like so:  <br> 
+&emsp; First can also be substituted with [0] like so:  <br> 
 &emsp;&emsp;  First 也可以替換為[0]：
 ```
 >>> yt.streams.order_by('resolution').desc()[0]
 <Stream: itag="399" mime_type="video/mp4" res="1080p" fps="24fps" vcodec="av01.0.08M.08" progressive="False" type="video">
 ```
-meaning that  <br> 
+&emsp; meaning that  <br> 
 &emsp;&emsp; 意思是
 ```
 >>> yt.streams.first() == yt.streams[0]
