@@ -2,7 +2,7 @@
 ### &emsp;&emsp; - Pytube <br> &emsp;&emsp; - you-get
 
 ## － 建置虛擬環境：
-###  ⚠ 安裝 Python 3.9.6 (記得勾選安裝的首頁最下面的 Add Python 3.9 to PATH)
+###  ⚠
 > ###  PowerShell ISE
 >> 1. get-executionpolicy (會回傳 Restricted
 >> 2. set-executionpolicy remotesigned
