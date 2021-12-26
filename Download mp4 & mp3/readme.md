@@ -8,5 +8,9 @@
 ### YouTube影片下載（五）：PyTube3程式庫更新說明
 > https://swf.com.tw/?p=1402
 
+
+### 使用Python Tkinter 模組
+> https://www.rs-online.com/designspark/python-tkinter-cn
+
 ### tkinter 模組字體（font）的使用
 > https://www.pynote.net/archives/1220
