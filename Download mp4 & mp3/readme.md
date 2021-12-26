@@ -8,6 +8,8 @@
 ### YouTube影片下載（五）：PyTube3程式庫更新說明
 > https://swf.com.tw/?p=1402
 
+### Python tkinter 視窗程式設計教學：Hello World
+> https://officeguide.cc/python-tkinter-gui-tcl-tk-interface-tutorial-examples/
 
 ### 使用Python Tkinter 模組
 > https://www.rs-online.com/designspark/python-tkinter-cn
