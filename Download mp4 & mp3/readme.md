@@ -3,8 +3,11 @@
 
 ## 參考資料：
 
-### Pytube 用法
+### Pytube 用法 (官方)
 > https://pytube.io/en/latest/user/streams.html#filtering-streams
+
+### module contains a lookup table of YouTube's itag values
+> https://github.com/pytube/pytube/blob/master/pytube/itags.py
 
 ### 視窗圖形介面的Youtube影片下載程式
 > https://zh-tw.coderbridge.com/@Eterna-E
