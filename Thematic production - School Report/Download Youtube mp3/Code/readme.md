@@ -94,7 +94,7 @@ def onComplete(stream, file_path):
 
 yt = YouTube('https://www.youtube.com/watch?v=qhCMjYjVyEg', on_progress_callback=onProgress,
                      on_complete_callback=onComplete)
-yt.streams.filter(subtype='mp4',resolution="1440")[0].download()
+yt.streams.filter(subtype='mp4',resolution="1080p")[0].download()
 ```
 
 ### 下載單一 mp3 (download_mp4_and_mp3.py)
