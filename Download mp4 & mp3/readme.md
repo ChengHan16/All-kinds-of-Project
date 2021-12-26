@@ -2,6 +2,10 @@
 ### &emsp;&emsp; - Pytube <br> &emsp;&emsp; - you-get
 
 ## 參考資料：
+
+### Pytube 用法
+> https://pytube.io/en/latest/user/streams.html#filtering-streams
+
 ### 視窗圖形介面的Youtube影片下載程式
 > https://zh-tw.coderbridge.com/@Eterna-E
 
