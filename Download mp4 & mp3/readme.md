@@ -67,6 +67,10 @@
 ### 特定目錄中下載 How to download whole playlist videos from YouTube using Python 
 > https://freshlybuilt.com/how-to-download-whole-playlist-videos-from-youtube-using-python/
 
+## 待參考
+### Python Script to Download YouTube Videos
+> https://www.journaldev.com/40720/python-script-to-download-youtube-videos
+
 ## Other：
 ### FFmpeg 批量 AV 轉換器
 > https://ffmpeg-batch.sourceforge.io/
@@ -82,3 +86,5 @@
 
 ### python實現指定資料夾下的指定檔案移動到指定位置
 > https://www.itread01.com/article/1537165863.html
+
+
