@@ -20,6 +20,9 @@
 ### UTF-8 decode 0xa4
 > 解決辦法：將 UTF-8 編碼改為 ANSI 
 
+> Error: __init__: could not find match for ^\w+\W
+https://stackoverflow.com/questions/70776558/pytube-exceptions-regexmatcherror-init-could-not-find-match-for-w-w
+
 ## － 參考資料：
 
 ### Pytube 用法 (官方)
