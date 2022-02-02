@@ -20,8 +20,17 @@
 ### UTF-8 decode 0xa4
 > 解決辦法：將 UTF-8 編碼改為 ANSI 
 
-> Error: __init__: could not find match for ^\w+\W
+> Error: __init__: could not find match for ^\w+\W <br>
 https://stackoverflow.com/questions/70776558/pytube-exceptions-regexmatcherror-init-could-not-find-match-for-w-w
+
+### AttributeError: 'NoneType' object has no attribute 'span' <br>
+> 解決辦法：<br>
+Make sure you in pytube/cipher.py on line 293: <br>
+You change <br>
+`name = re.escape(get_throttling_function_name(js))` <br>
+to <br>
+`name = "iha"` <br>
+https://stackoverflow.com/questions/70060263/pytube-attributeerror-nonetype-object-has-no-attribute-span
 
 ## － 參考資料：
 
