@@ -26,5 +26,7 @@
 &emsp;
 > https://www.crifan.com/windows_python_install_error_could_not_install_/
 #### ● 'cp950' codec can't encode ?
+&emsp;
 `解決辦法：修改 Python 程式，在 open 檔案時多一個輸入參數，讓讀寫檔案的編碼方式為 UTF-8` <br> `open('text.txt', 'w', encoding='UTF-8')`
+&emsp;
 > https://weirenxue.github.io/2021/06/12/python_cp950_codec_cant_encode/
