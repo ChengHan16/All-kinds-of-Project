@@ -14,10 +14,10 @@
 >> 4. 在虛擬環境下安裝專案所需套件 pip3 install "套件名稱"
 > ### pip install Complete
 ---
-## 參考資料
+## － 參考資料
 > https://zhuanlan.zhihu.com/p/371123139
-## Error 
-### ERROR: Could not install packages due to an OSError: [WinError 5] 存取被拒。
+##－ Error 
+### ● ERROR: Could not install packages due to an OSError: [WinError 5] 存取被拒。
 ```
 解決辦法：python -m pip install --upgrade pip
 ```
