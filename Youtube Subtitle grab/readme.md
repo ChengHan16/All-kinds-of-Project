@@ -22,12 +22,12 @@
 ### How to get the subtitles from youtube videos with Python
 > https://www.youtube.com/watch?v=HulPgd-QgJk
 ## －Error 
-#### ● ERROR: Could not install packages due to an OSError: [WinError 5] 存取被拒。
+### ● ERROR: Could not install packages due to an OSError: [WinError 5] 存取被拒。
 &emsp;
 `解決辦法：python -m pip install --upgrade pip`
 &emsp;
 > https://www.crifan.com/windows_python_install_error_could_not_install_/
-#### ● 'cp950' codec can't encode ?
+### ● 'cp950' codec can't encode ?
 &emsp;
 `解決辦法：修改 Python 程式，在 open 檔案時多一個輸入參數，讓讀寫檔案的編碼方式為 UTF-8` <br> &emsp; `open('text.txt', 'w', encoding='UTF-8')`
 &emsp;
