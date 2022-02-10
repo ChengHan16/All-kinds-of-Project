@@ -1,5 +1,5 @@
 ## Subtitle grab
-## － 建置虛擬環境：
+## －建置虛擬環境：
 > ###  PowerShell ISE
 >> 1. get-executionpolicy (會回傳 Restricted
 >> 2. set-executionpolicy remotesigned
@@ -17,7 +17,7 @@
 ## －參考資料
 > https://zhuanlan.zhihu.com/p/371123139
 ## －Error 
-### ● ERROR: Could not install packages due to an OSError: [WinError 5] 存取被拒。
+#### ● ERROR: Could not install packages due to an OSError: [WinError 5] 存取被拒。
 ```
 解決辦法：python -m pip install --upgrade pip
 ```
