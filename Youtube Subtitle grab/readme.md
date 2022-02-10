@@ -1,4 +1,7 @@
 ## Subtitle grab
+## 使用套件
+### pip install youtube_transcript_api
+
 ## －建置虛擬環境：
 > ###  PowerShell ISE
 >> 1. get-executionpolicy (會回傳 Restricted
