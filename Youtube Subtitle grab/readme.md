@@ -18,6 +18,11 @@
 > ### pip install Complete
 ---
 ## －參考資料
+### youtube-transcript-api
+> https://pypi.org/project/youtube-transcript-api/#list-available-transcripts
+### Issues · jdepoix/youtube-transcript-api
+> https://github.com/jdepoix/youtube-transcript-api/issues
+
 > https://zhuanlan.zhihu.com/p/371123139
 ### How to get the subtitles from youtube videos with Python
 > https://www.youtube.com/watch?v=HulPgd-QgJk
