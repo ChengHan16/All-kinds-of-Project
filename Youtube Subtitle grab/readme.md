@@ -17,8 +17,8 @@
 ## －參考資料
 > https://zhuanlan.zhihu.com/p/371123139
 ## －Error 
-#### ● ERROR: Could not install packages due to an OSError: [WinError 5] 存取被拒。
-```
-解決辦法：python -m pip install --upgrade pip
-```
+#### &emsp; ● ERROR: Could not install packages due to an OSError: [WinError 5] 存取被拒。
+&emsp;
+`解決辦法：python -m pip install --upgrade pip`
+&emsp;
 > https://www.crifan.com/windows_python_install_error_could_not_install_/
