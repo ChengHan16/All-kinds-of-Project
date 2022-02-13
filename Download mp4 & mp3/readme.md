@@ -31,7 +31,29 @@ You change <br>
 to <br>
 `name = "iha"` <br>
 https://stackoverflow.com/questions/70060263/pytube-attributeerror-nonetype-object-has-no-attribute-span
-
+### AttributeError: 'NoneType' object has no attribute 'span' 方法 2<br>
+```
+改變：
+  ● 文件 cipher.py，第 268 行到
+   r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&\s*'r'\([a-z]\s*=\s*([a-zA-Z0-9$]{3})(\[\d+\])?\([a-z]\)',
+  ● 文件 cipher.py，第 275 -> 277 行到
+            logger.debug("finished regex search, matched: %s", pattern)
+            if len(function_match.groups()) == 1:
+                return function_match.group(1)
+            idx = function_match.group(2)
+            if idx:
+                idx = idx.strip("[]")
+                array = re.search(
+                    r'var {nfunc}\s*=\s*(\[.+?\]);'.format(
+                        nfunc=function_match.group(1)),
+                    js
+                )
+                if array:
+                    array = array.group(1).strip("[]").split(",")
+                    array = [x.strip() for x in array]
+                    return array[int(idx)]
+```
+> https://github.com/pytube/pytube/issues/1218
 ## － 參考資料：
 
 ### Pytube 用法 (官方)
