@@ -19,7 +19,7 @@
 ## － Error：
 ### ERROR: Could not install packages due to an OSError: [WinError 5] 存取被拒。<br> : 'C:\\Users\\Harry\\AppData\\Local\\Temp\\pip-uninstall-aaiyrmoc\\pip.exe' <br> Consider using the `--user` option or check the permissions.
 > 加上–user
-> ` python -m pip install --upgrade pip --user `
+>> ` python -m pip install --upgrade pip --user `
 ### in _execute_child hp, ht, pid, tid = _winapi.CreateProcess(executable, args, FileNotFoundError: <br> [WinError 2] 系统找不到指定的文件。
 ```
 File "I:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\subprocess.py",
