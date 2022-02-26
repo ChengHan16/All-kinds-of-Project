@@ -17,6 +17,21 @@
 > ### pip install Complete
 ---
 ## － Error：
+### ERROR: Could not install packages due to an OSError: [WinError 5] 存取被拒。<br> : 'C:\\Users\\Harry\\AppData\\Local\\Temp\\pip-uninstall-aaiyrmoc\\pip.exe' <br> Consider using the `--user` option or check the permissions.
+> 加上–user
+> ` python -m pip install --upgrade pip --user `
+### in _execute_child hp, ht, pid, tid = _winapi.CreateProcess(executable, args, FileNotFoundError: <br> [WinError 2] 系统找不到指定的文件。
+```
+File "I:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\subprocess.py",
+根据提示找到lib中的subprocess.py文件，CTRL+f查找class Popen模块，再将这个模块中的
+init函数中的shell = False 改成shell = True
+
+作者：302室
+链接：https://www.jianshu.com/p/fbc31e1cc32a
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+```
+
 ### UTF-8 decode 0xa4
 > 解決辦法：將 UTF-8 編碼改為 ANSI 
 
