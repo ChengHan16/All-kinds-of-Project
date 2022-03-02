@@ -1,4 +1,5 @@
 # youtube-dl usage
+## 抓取影片各項資訊,不下載影片 download 為 Flase
 ```py
 from pprint import pprint
 import youtube_dl
@@ -30,3 +31,4 @@ if __name__ == '__main__':
     video_info = get_video_info('https://www.youtube.com/watch?v=Vn3ocg9Fnc8&t=262s')
     pprint(video_info)
 ```
+![image](https://user-images.githubusercontent.com/55220866/156368861-1e77242d-65ef-40b7-8d54-7e9fdb4e59a9.png)
