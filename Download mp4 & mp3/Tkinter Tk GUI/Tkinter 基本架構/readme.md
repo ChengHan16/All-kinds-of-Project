@@ -8,6 +8,12 @@
 `window.title('Tkinter_Test')`
 ### 設定像素大小
 `window.geometry('1280x720')`
+|補充解析度||
+|--|--|
+|  |1280x720|
+|HD|1920*1080|
+|SD|2560*1440|
+|UHD|3840*2160|
 ### 設定主視窗寬、高皆不可縮放
 `window.resizable(False,False)`
 ### 主視窗迴圈顯示
