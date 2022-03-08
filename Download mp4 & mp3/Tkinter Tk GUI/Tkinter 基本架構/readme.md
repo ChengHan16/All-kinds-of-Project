@@ -29,7 +29,22 @@ window.resizable(False,False) #設定主視窗寬、高皆不可縮放
 window.mainloop() #主視窗迴圈顯示
 ```
 ![image](https://user-images.githubusercontent.com/55220866/157248672-2a03f16a-a633-4f45-a0c1-f2c807655bd4.png)
+## Ⅱ
+### Hello Word 
+使用 標籤 ( Label )
+> 宣告標籤的時候，需要先宣告一個標籤，再給予位置，如果沒有給予位置資訊的話將不會被放在視窗上面，這邊我們使用grid來告訴視窗標籤要放在該容器中的 (0, 0) 這個位置，此外沒有給定視窗寬、高大小的話，視窗會依照Widget大小而自動去調整：
+```py
+import tkinter as tk #匯入 Tkinter 函式庫
 
+window = tk.Tk() #定義一個視窗 名叫 window
+window.title('Tkinter_Test') #設定標題
+window.geometry('1280x720') #設定像素大小
+window.resizable(False,False) #設定主視窗寬、高皆不可縮放
 
+lbl_1 = tk.Label(window, text='Hello World', background='light grey', foreground='black', font=('Arial', 20))
+lbl_1.grid(column=0, row=0)
 
+window.mainloop() #主視窗迴圈顯示
+```
+![image](https://user-images.githubusercontent.com/55220866/157254509-b912a1be-dc70-4435-b10d-99fc81fcb38d.png)
 
