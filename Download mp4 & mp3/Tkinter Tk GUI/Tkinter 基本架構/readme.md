@@ -1,13 +1,13 @@
 ## Tkinter 基本架構
 ##  - Ⅰ 
 ### 匯入 Tkinter 函式庫
-`import tkinter as tk`
+> import tkinter as tk
 ### 定義一個視窗 名叫 window
-`window = tk.Tk() `
+> window = tk.Tk() 
 ### 設定標題
-`window.title('Tkinter_Test')`
+> window.title('Tkinter_Test')
 ### 設定像素大小
-`window.geometry('1280x720')`
+> window.geometry('1280x720')
 |補充解析度||
 |--|--|
 |  |1280x720|
@@ -15,9 +15,9 @@
 |SD|2560*1440|
 |UHD|3840*2160|
 ### 設定主視窗寬、高皆不可縮放
-`window.resizable(False,False)`
+> window.resizable(False,False)
 ### 主視窗迴圈顯示
-`window.mainloop()`
+> window.mainloop()
 ### 完整 CODE
 ```py
 import tkinter as tk #匯入 Tkinter 函式庫
@@ -86,5 +86,5 @@ window.mainloop() #主視窗迴圈顯示
 |grid()|網格|
 |place()|位置|
 
-解決方法：把 pack 都改成 grid
+解決方法：把 pack 都改成 grid <>
 參考資料：https://blog.csdn.net/cool99781/article/details/106200985
