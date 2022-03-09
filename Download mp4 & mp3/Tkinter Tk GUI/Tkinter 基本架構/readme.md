@@ -147,6 +147,10 @@ window.mainloop() #主視窗迴圈顯示
 > https://shengyu7697.github.io/python-tkinter-entry/
 ### Python tkinter Button 按鈕用法與範例
 > https://shengyu7697.github.io/python-tkinter-button/
+### Tkinter 字體 & 大小
+> https://jennaweng0621.pixnet.net/blog/post/404206418-%5Bday-3%5D-tkinter-gui%E6%95%99%E5%AD%B8_label%E6%87%89%E7%94%A8
+### 更改 Tkinter 標籤字型大小
+> https://www.delftstack.com/zh-tw/howto/python-tkinter/how-to-change-the-tkinter-label-font-size/
 ### tkinter的布局方法
 > https://pythonhi.pixnet.net/blog/post/322521486
 ### Tkinter 教程 - 佈局管理
