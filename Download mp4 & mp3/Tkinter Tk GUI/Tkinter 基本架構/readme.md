@@ -76,8 +76,28 @@ window.mainloop() #主視窗迴圈顯示
 > tkinter Button 的用法如下，一開始先用 tk.Button 建立一個按鈕，給這個按鈕一個顯示的文字 button，再用一個變數 mybutton 來儲存回傳的 tk.Button
 >> mybutton = tk.Button(root, text='button') <br>
 >> mybutton.pack()
+```py
+import tkinter as tk
+
+window = tk.Tk() #定義一個視窗 名叫 window
+window.title('Tkinter_Test') #設定標題
+window.geometry('1280x720') #設定像素大小
+window.resizable(False,False) #設定主視窗寬、高皆不可縮放
+
+mylabel = tk.Label(window, text='Please enter URL：', font = ('微軟正黑體',15), background = '#BEBEBE')
+mylabel.grid(row=0, column=0)
+
+Enter1 = tk.Entry(window, width = 50)
+Enter1.grid(row=0, column=1)
+
+mybutton = tk.Button(window, text='button', font = ('微軟正黑體',12), background = '#BEBEBE')
+mybutton.grid(row=0, column=2)
+
+window.mainloop() #主視窗迴圈顯示
 ```
-```
+![image](https://user-images.githubusercontent.com/55220866/157456340-6fa7fc78-9082-4063-8c49-bbb1d89dc4fb.png)
+
+
 ## Error
 ### _tkinter.TclError: cannot use geometry manager pack inside . which already has slaves managed by grid
 |method|describe|
