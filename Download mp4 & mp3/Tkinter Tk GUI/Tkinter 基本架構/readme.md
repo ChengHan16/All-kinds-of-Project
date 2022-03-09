@@ -47,4 +47,9 @@ lbl_1.grid(column=0, row=0)
 window.mainloop() #主視窗迴圈顯示
 ```
 ![image](https://user-images.githubusercontent.com/55220866/157254509-b912a1be-dc70-4435-b10d-99fc81fcb38d.png)
-
+## Ⅲ
+### 視窗元件使用
+### 1. 文字輸入框 [tkinter Entry]
+> tkinter Entry 基本用法，tk.Entry() 初始化完以後，用 grid() 來設定排版，Label 在左邊(0,0)，Entry 在右邊(0,1) ，之後就進入 mainloop()
+>> Enter1 = tk.Entry(window) <br>
+>> Enter1.grid(row=0, column=0)
