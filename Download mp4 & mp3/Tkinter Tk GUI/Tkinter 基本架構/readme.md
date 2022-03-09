@@ -101,9 +101,15 @@ window.mainloop() #主視窗迴圈顯示
 ### 讀取圖片
 > def create_label_image(): <br>
     img = Image.open('./images/cat_1.jpg')
-### # 縮小圖片
+### 縮小圖片
 > img = img.resize( (img.width // 10, img.height // 10) )   
-
+### 轉換成Tkinter可以用的圖片
+> imgTk =  ImageTk.PhotoImage(img)
+### 宣告標籤並且設定圖片
+> lbl_2 = tk.Label(window, image=imgTk)
+# 排版位置
+> lbl_2.image = imgTk <br>
+  lbl_2.grid(column=0, row=0)
 
 
 ![image](https://user-images.githubusercontent.com/55220866/157462426-91f80528-4491-4bf1-b68e-97d9ea79afe0.png)
