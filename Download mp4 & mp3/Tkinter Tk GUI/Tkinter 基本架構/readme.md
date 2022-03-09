@@ -62,7 +62,7 @@ window = tk.Tk() #定義一個視窗 名叫 window
 window.title('Tkinter_Test') #設定標題
 window.geometry('1280x720') #設定像素大小
 window.resizable(False,False) #設定主視窗寬、高皆不可縮放
-
+`
 mylabel = tk.Label(window, text='Please enter URL：', font = ('微軟正黑體',15), background = '#BEBEBE')
 mylabel.grid(row=0, column=0)
 
@@ -85,4 +85,6 @@ window.mainloop() #主視窗迴圈顯示
 |pack()|包装|
 |grid()|網格|
 |place()|位置|
+
+`把pack都改成grid`
 參考資料：https://blog.csdn.net/cool99781/article/details/106200985
