@@ -86,5 +86,5 @@ window.mainloop() #主視窗迴圈顯示
 |grid()|網格|
 |place()|位置|
 
-`把pack都改成grid`
+解決方法：把 pack 都改成 grid
 參考資料：https://blog.csdn.net/cool99781/article/details/106200985
