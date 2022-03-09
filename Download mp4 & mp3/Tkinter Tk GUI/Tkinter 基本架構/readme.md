@@ -100,18 +100,46 @@ window.mainloop() #主視窗迴圈顯示
 > 要注意的是需要將圖片轉成Tkinter 可以讀的格式：
 ### 讀取圖片
 > def create_label_image(): <br>
-    img = Image.open('./images/cat_1.jpg')
+&emsp; img = Image.open('./images/cat_1.jpg')
 ### 縮小圖片
 > img = img.resize( (img.width // 10, img.height // 10) )   
 ### 轉換成Tkinter可以用的圖片
 > imgTk =  ImageTk.PhotoImage(img)
 ### 宣告標籤並且設定圖片
 > lbl_2 = tk.Label(window, image=imgTk)
-# 排版位置
+### 排版位置
 > lbl_2.image = imgTk <br>
   lbl_2.grid(column=0, row=0)
+### Result
+```py
+import tkinter as tk
+from PIL import Image, ImageTk
 
+window = tk.Tk() #定義一個視窗 名叫 window
+window.title('Tkinter_Test') #設定標題
+window.geometry('720x320') #設定像素大小
+window.resizable(False,False) #設定主視窗寬、高皆不可縮放
 
+def create_label_image():
+    img = Image.open('./images/youtube.png')      
+    img = img.resize( (img.width // 6, img.height // 6) )   
+    imgTk =  ImageTk.PhotoImage(img)
+    lbl_2 = tk.Label(window, image=imgTk)
+    lbl_2.image = imgTk
+    lbl_2.place(x=315, y=50)
+
+mylabel = tk.Label(window, text='Please enter URL：', font = ('微軟正黑體',12), background = '#BEBEBE')
+mylabel.pack(side='left', ipadx=10, padx=10)
+
+Enter1 = tk.Entry(window, width = 40)
+Enter1.pack(side='left', ipadx=10, padx=10)
+
+mybutton = tk.Button(window, text='Download', font = ('微軟正黑體',10), background = '#BEBEBE', width = 20)
+mybutton.pack(side='left')
+
+create_label_image()
+window.mainloop() #主視窗迴圈顯示
+```
 ![image](https://user-images.githubusercontent.com/55220866/157462426-91f80528-4491-4bf1-b68e-97d9ea79afe0.png)
 
 ## Error
