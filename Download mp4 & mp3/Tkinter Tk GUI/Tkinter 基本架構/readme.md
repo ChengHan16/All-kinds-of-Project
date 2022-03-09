@@ -72,6 +72,17 @@ Enter1.grid(row=0, column=1)
 window.mainloop() #主視窗迴圈顯示
 ```
 ![image](https://user-images.githubusercontent.com/55220866/157454023-89029e72-7f0a-46de-9964-b527c236baa5.png)
-
-
-
+### 2. 按鈕 ( Button )
+> tkinter Button 的用法如下，一開始先用 tk.Button 建立一個按鈕，給這個按鈕一個顯示的文字 button，再用一個變數 mybutton 來儲存回傳的 tk.Button
+>> mybutton = tk.Button(root, text='button') <br>
+>> mybutton.pack()
+```
+```
+## Error
+### _tkinter.TclError: cannot use geometry manager pack inside . which already has slaves managed by grid
+|method|describe|
+|---|---|
+|pack()|包装|
+|grid()|網格|
+|place()|位置|
+參考資料：https://blog.csdn.net/cool99781/article/details/106200985
