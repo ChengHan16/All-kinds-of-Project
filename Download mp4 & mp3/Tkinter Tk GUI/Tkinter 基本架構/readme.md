@@ -142,8 +142,10 @@ window.mainloop() #主視窗迴圈顯示
 ```
 ![image](https://user-images.githubusercontent.com/55220866/157462426-91f80528-4491-4bf1-b68e-97d9ea79afe0.png)
 
+
+
 ## Error
-### _tkinter.TclError: cannot use geometry manager pack inside . which already has slaves managed by grid
+### ◆ _tkinter.TclError: cannot use geometry manager pack inside . which already has slaves managed by grid
 |method|describe|
 |---|---|
 |pack()|包装|
@@ -151,7 +153,16 @@ window.mainloop() #主視窗迴圈顯示
 |place()|位置|
 
 解決方法：把 pack 都改成 grid <br>
+> Step 1: Uninstall the PIL package.
+>> pip uninstall PIL
+>> python3 -m pip install --upgrade pip
+>> python3 -m pip install --upgrade Pillow
+>> pip install --upgrade --force-reinstall Pillow
+
 參考資料：https://blog.csdn.net/cool99781/article/details/106200985
+
+### ◆ Python ImportError: No module named PIL Solution
+參考資料： https://itsmycode.com/python-importerror-no-module-named-pil-solution/
 
 ## 參考資料
 > https://www.rs-online.com/designspark/python-tkinter-cn#_Toc61529918
