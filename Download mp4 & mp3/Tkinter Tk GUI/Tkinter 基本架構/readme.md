@@ -142,6 +142,17 @@ window.mainloop() #主視窗迴圈顯示
 ```
 ![image](https://user-images.githubusercontent.com/55220866/157462426-91f80528-4491-4bf1-b68e-97d9ea79afe0.png)
 
+## 參考方法
+### Python tkinter Entry 文字輸入框用法與範例
+> https://shengyu7697.github.io/python-tkinter-entry/
+### Python tkinter Button 按鈕用法與範例
+> https://shengyu7697.github.io/python-tkinter-button/
+### tkinter的布局方法
+> https://pythonhi.pixnet.net/blog/post/322521486
+### Tkinter 教程 - 佈局管理
+> https://www.delftstack.com/zh-tw/tutorial/tkinter-tutorial/tkinter-geometry-managers/
+### Tkinter 布局管理 
+> https://blog.csdn.net/liuxu0703/article/details/54428405
 
 
 ## Error
@@ -164,5 +175,5 @@ window.mainloop() #主視窗迴圈顯示
 ### ◆ Python ImportError: No module named PIL Solution
 參考資料： https://itsmycode.com/python-importerror-no-module-named-pil-solution/
 
-## 參考資料
+## 練習參考資料
 > https://www.rs-online.com/designspark/python-tkinter-cn#_Toc61529918
