@@ -53,3 +53,25 @@ window.mainloop() #主視窗迴圈顯示
 > tkinter Entry 基本用法，tk.Entry() 初始化完以後，用 grid() 來設定排版，Label 在左邊(0,0)，Entry 在右邊(0,1) ，之後就進入 mainloop()
 >> Enter1 = tk.Entry(window) <br>
 >> Enter1.grid(row=0, column=0)
+### 範例
+```py
+import tkinter as tk
+from turtle import bk #匯入 Tkinter 函式庫
+
+window = tk.Tk() #定義一個視窗 名叫 window
+window.title('Tkinter_Test') #設定標題
+window.geometry('1280x720') #設定像素大小
+window.resizable(False,False) #設定主視窗寬、高皆不可縮放
+
+mylabel = tk.Label(window, text='Please enter URL：', font = ('微軟正黑體',15), background = '#BEBEBE')
+mylabel.grid(row=0, column=0)
+
+Enter1 = tk.Entry(window, width = 50)
+Enter1.grid(row=0, column=1)
+
+window.mainloop() #主視窗迴圈顯示
+```
+![image](https://user-images.githubusercontent.com/55220866/157454023-89029e72-7f0a-46de-9964-b527c236baa5.png)
+
+
+
