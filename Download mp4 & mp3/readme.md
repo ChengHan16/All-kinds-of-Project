@@ -70,6 +70,25 @@ https://stackoverflow.com/questions/70060263/pytube-attributeerror-nonetype-obje
                     array = [x.strip() for x in array]
                     return array[int(idx)]
 ```
+
+### pytube.exceptions.RegexMatchError: get_throttling_function_name: could not find match for multiple
+> https://stackoverflow.com/questions/68945080/pytube-exceptions-regexmatcherror-get-throttling-function-name-could-not-find
+把 cipher.py 內的
+```
+function_patterns = [
+
+    r'a\.C&&\(b=a\.get\("n"\)\)&&\(b=([^(]+)\(b\),a\.set\("n",b\)\)}};',
+]
+```
+改為：
+```
+r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&\s*'
+r'\([a-z]\s*=\s*([a-zA-Z0-9$]{2,3})(\[\d+\])?\([a-z]\)'
+```
+還須將第288行改為：
+```
+nfunc=re.escape(function_match.group(1))),
+```
 > https://github.com/pytube/pytube/issues/1218
 ## － 參考資料：
 
