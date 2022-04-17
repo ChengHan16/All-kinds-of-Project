@@ -72,7 +72,8 @@ https://stackoverflow.com/questions/70060263/pytube-attributeerror-nonetype-obje
 ```
 
 ### pytube.exceptions.RegexMatchError: get_throttling_function_name: could not find match for multiple
-> https://stackoverflow.com/questions/68945080/pytube-exceptions-regexmatcherror-get-throttling-function-name-could-not-find <br> 
+> https://stackoverflow.com/questions/68945080/pytube-exceptions-regexmatcherror-get-throttling-function-name-could-not-find
+> 
 把 cipher.py 內的
 ```
 function_patterns = [
