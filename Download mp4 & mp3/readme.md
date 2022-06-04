@@ -91,8 +91,14 @@ r'\([a-z]\s*=\s*([a-zA-Z0-9$]{2,3})(\[\d+\])?\([a-z]\)'
 nfunc=re.escape(function_match.group(1))),
 ```
 ### pytube.exceptions.RegexMatchError: __init__: could not find match for ^\w+\W
-> var_regex = re.compile(r"^\w+\W") 改為 var_regex = re.compile(r"^\$*\w+\W")
-參考資料：https://stackoverflow.com/questions/70776558/pytube-exceptions-regexmatcherror-init-could-not-find-match-for-w-w
+```
+var_regex = re.compile(r"^\w+\W") 
+```
+改為 
+```
+var_regex = re.compile(r"^\$*\w+\W")
+```
+> 參考資料：https://stackoverflow.com/questions/70776558/pytube-exceptions-regexmatcherror-init-could-not-find-match-for-w-w
 
 > https://github.com/pytube/pytube/issues/1218
 ## － 參考資料：
