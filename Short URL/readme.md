@@ -38,6 +38,25 @@ print(response)
 ## Result
 ![image](https://user-images.githubusercontent.com/55220866/173550324-069946f2-137c-4e8b-a524-c2b7671bf0e8.png)
 ---
+一次執行縮短多個 url 的
+```py
+import bitlyshortener
+
+access_tokens = ["YOUR_ACCESS_TOKEN"] 
+shortener = bitlyshortener.Shortener(tokens=access_tokens)
+n=int(input( "NO. of urls want shorten?"))
+long_urls=[]
+
+for i in range(n):
+    li=input("Enter url")
+    long_urls.append(li)
+
+long_urls= shortener.shorten_urls(long_urls)
+print('Shortened url :',long_urls)
+```
+使用程式出處：https://pythonhowtoprogram.com/how-to-generate-bitly-shortener-urls-with-the-bitly-api-in-python-3/
+
+---
 ## - Error
 ### ● 'from bitly_api import Connection, BitlyError, Error' in pycharm or Vscode?
 > 1.若以安裝 bitly_api 套件，就請先解除安裝 `pip uninstall bitly_api` <br><br>
