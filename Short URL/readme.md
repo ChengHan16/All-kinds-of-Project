@@ -43,3 +43,11 @@ print(response)
 
 參考資料：https://stackoverflow.com/questions/54977488/how-can-i-resolve-from-bitly-api-import-connection-bitlyerror-error-in-pycha
 
+---
+## 參考資料：
+使用 Python 和 Bitly 缩短您的 URL
+> https://news.sangniao.com/p/2237394596
+
+How To Generate Bitly Shortener URLs with the Bitly API in Python 3
+> https://pythonhowtoprogram.com/how-to-generate-bitly-shortener-urls-with-the-bitly-api-in-python-3/
+
