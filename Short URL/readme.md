@@ -21,6 +21,7 @@
 ### &emsp;&emsp; - pip install bitly-api
 ---
 ## Code
+編譯前需要先到 [bitly](https://bitly.com/) 註冊帳號，然後在個人設定中選取 Developer settings 裡的 `API`<br> 然後輸入密碼獲取你的 `Access token`
 ```py
 import bitly_api
 
