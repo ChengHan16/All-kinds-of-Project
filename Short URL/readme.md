@@ -34,7 +34,7 @@ response = x.shorten(url_input)
 print(response)
 ```
 ## Result
-![image](https://user-images.githubusercontent.com/55220866/173549733-11691396-2715-4455-8457-e2ef6d3d93cb.png)
+![image](https://user-images.githubusercontent.com/55220866/173550324-069946f2-137c-4e8b-a524-c2b7671bf0e8.png)
 ---
 ## - Error
 ### ● 'from bitly_api import Connection, BitlyError, Error' in pycharm?
