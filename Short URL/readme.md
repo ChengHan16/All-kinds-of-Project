@@ -12,7 +12,7 @@
 > ### pip install
 >> 1. 安裝虛擬環境軟體 pip3 install virtualenv  
 >> 2. 建立虛擬環境 virtualenv venv-short-url
->> 3. 開啟虛擬環境 .\venvvenv-short-url\Scripts\activate
+>> 3. 開啟虛擬環境 .\venv-short-url\Scripts\activate
 >>> 關閉虛擬環境 deactivate <br>
 >>> 刪除虛擬環境 env remove --name myenv
 >> 4. 在虛擬環境下安裝專案所需套件 pip3 install "套件名稱"
