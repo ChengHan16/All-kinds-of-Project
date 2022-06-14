@@ -39,7 +39,7 @@ print(response)
 ![image](https://user-images.githubusercontent.com/55220866/173550324-069946f2-137c-4e8b-a524-c2b7671bf0e8.png)
 ---
 ## - Error
-### ● 'from bitly_api import Connection, BitlyError, Error' in pycharm?
+### ● 'from bitly_api import Connection, BitlyError, Error' in pycharm or Vscode?
 > 1.若以安裝 bitly_api 套件，就請先解除安裝 `pip uninstall bitly_api` <br><br>
 > 2.從旁邊連結下載 Bitly API 模組 [bitly-api-python](https://github.com/bitly/bitly-api-python)，點擊綠色 Code 按 Dowanload <br><br>
 > 3.將下載的文件解壓縮到目錄底下或是虛擬環境中的site-packages資料夾內，再來輸入 cd 切換進到 bitly-api-python-master資料夾<br> `cd bitly-api-python-master`<br><br>
