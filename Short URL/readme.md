@@ -20,8 +20,20 @@
 ---
 ### &emsp;&emsp; - pip install bitly-api-py3
 ---
-## - Error
+## Code
+```py
+import bitly_api
 
+BITLY_ACCESS_TOKEN ="YOUR_ACCESS_TOKEN"
+
+x = bitly_api.Connection(access_token = BITLY_ACCESS_TOKEN)
+url_input = input("Enter the url: ")
+
+response = x.shorten(url_input)
+print(response)
+```
+---
+## - Error
 ### ● 'from bitly_api import Connection, BitlyError, Error' in pycharm?
 > 1.若以安裝 bitly_api 套件，就請先解除安裝 `pip uninstall bitly_api` <br><br>
 > 2.從旁邊連結下載 Bitly API 模組 [bitly-api-python](https://github.com/bitly/bitly-api-python)，點擊綠色 Code 按 Dowanload <br><br>
