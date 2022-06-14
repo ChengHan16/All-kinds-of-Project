@@ -18,7 +18,7 @@
 >> 4. 在虛擬環境下安裝專案所需套件 pip3 install "套件名稱"
 > ### pip install Complete
 ---
-### &emsp;&emsp; - pip install bitly-api-py3
+### &emsp;&emsp; - pip install bitly-api
 ---
 ## Code
 ```py
