@@ -19,7 +19,7 @@
 >> ###  pip install pytube
 ---
 > Download image
->> pip install beautifulsoup4
+>> ### pip install beautifulsoup4
 >> ### pip install requests
 ---
 > Subtitle grab
