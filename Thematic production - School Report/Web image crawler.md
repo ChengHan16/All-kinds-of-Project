@@ -45,7 +45,7 @@ def getImage(page):
 
 if __name__ == '__main__':
   # 指定要爬取的網站
-  url = "https://www.jkforum.net/thread-11188010-1-1.html"
+  url = "url"
   # 得到該網站的原始碼
   page = getHtmlCode(url)
   # 爬取該網站的圖片並且儲存
