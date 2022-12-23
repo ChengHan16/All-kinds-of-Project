@@ -2,12 +2,10 @@
 ### [網路爬蟲_Facebook粉絲團貼文與留言](https://tlyu0419.github.io/2019/05/01/Crawl-Facebook/)
 ### [[爬蟲]如何用Python與Facebook API蒐集各大網站下面的"FB留言"?](http://bhan0507.logdown.com/posts/1406669-python-facebook-api-comments)
 ### [Day 21：專案04 - Facebook爬蟲02 | Selenium](https://ithelp.ithome.com.tw/articles/10272370)
-### [爬蟲教學](https://gist.github.com/HaoHsiu-Huang/f4a68bec77c17e0e118a6a5cb4dffed1)
------
-# fb爬蟲教學
 
-# 緣起
-因為有朋友託我爬fb上的資料，方便收集貼文與留言，於是就利用python寫了這篇教學文。而fb是動態網頁，比方說往下滑動會新增貼文，要按顯示更多才會顯示剩下的留言。因此需要利用selenium這個測試套件來模擬人的動作，包括輸入資料，點擊...等等。
+-----
+### [爬蟲教學](https://gist.github.com/HaoHsiu-Huang/f4a68bec77c17e0e118a6a5cb4dffed1)
+
 # 網址列表
 由於fb粉專是公開的，我就只列一個做教學用，如果要增加的話，可以陸續加上，然後再用for迴圈給它一個一個跑。
 ```python
