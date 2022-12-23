@@ -5,3 +5,8 @@
 
 -----
 ### [爬蟲教學](https://gist.github.com/HaoHsiu-Huang/f4a68bec77c17e0e118a6a5cb4dffed1)
+
+### 
+1. 重複留言
+2. 文字一致
+3. 簡單匯出
